@@ -11,10 +11,13 @@ Its successor **TLS** (Transport Layer Security) which often refer to as **SSL/T
 SSL certificate is a kind of digital document that helps the browser to exchange three keys with the server. **private key**, **public key** and a **session key**, the document is refered too typically as **CA (Certificate Authority)**
 
 
-<figure>
+<figure align="center">
   <img src="https://ee2cc1f8.rocketcdn.me/wp-content/uploads/2019/07/ca-diagram-b.png" alt="CA Certificate">
   <center>Figure 1: CA Certificate Overview</center>
 </figure>
+
+<br>
+<br>
 
 All the data encrypted by **private key** will be decrypted by **public key**. and vice verse, all the data encrypted by **public key** will be decrypted by **private key**.[1](https://www.ssl.com/faqs/faq-what-is-ssl/) This is an advanced mode of encryptions called *asymmetric cryptography*[2](https://www.techtarget.com/searchsecurity/definition/asymmetric-cryptography)
 
@@ -31,10 +34,14 @@ the typical usage of SSL (Secure Socket Layer) is on web browsering security via
 
 an **MiTM attack**, in definition, is a *cybersecurity threat* where the attacker intercept the data on a client-server connection or acting as both-ends as mutating their roles. The attacker can insert himself to send or receive information that wasn't meant to be sent to him.
 
-<figure>
+<figure align="center">
   <img src="pictures/ssl strip/mitm.png" alt="CA Certificate">
   <center>Figure 2: MiTM Attack</center>
 </figure>
+
+
+<br>
+<br>
 
 ### WIFI Eavesdropping
 
@@ -74,10 +81,13 @@ I would like to devide **MiTM** attacks into three different types, **intercepte
 - [Burp Suite](https://portswigger.net/burp)
 
 
-<figure>
+<figure align="center">
   <img src="pictures/ssl strip/SSLStrip.png" alt="SSL Strip">
   <center>Figure 3: Topology of an <a href = "https://www.computerweekly.com/tip/Sslstrip-tutorial-for-penetration-testers">SSL Attack</a></center>
 </figure>
+
+<br>
+<br>
 
 To explain **SSL Strip attack** in a better way, consider the next example.
 
@@ -112,7 +122,7 @@ If you take your time analysing the previous example to identify the **technic**
 
 
 
-### HTST (HTTP Strict Transport)
+### HSTS (HTTP Strict Transport Security)
 A common way to prevent this kind of attacks is using the HTTP Strict Transport Security (HSTS) policy.
 
 **HSTS**  is a mechanism that helps protect websites against protocol downgrade (in other words SSL stripping) attacks and [cookies hijacks](https://www.invicti.com/learn/cookie-hijacking/). It allows web servers to declare that clients (*such as web  browsers*) should only interact with it using HTTPS only.
@@ -125,7 +135,7 @@ include ``Strict-Transport-Security`` header in the HTTPS responses. This tells 
 
 **<span style="font-size:1.1em;">Flask implementation</span>**
 
-this is a small code for implementing HTST policy with python specificly **Flask** framework
+this is a small code for implementing **HSTS** policy with python specificly **Flask** framework
 ```python
 from flask import Flask, redirect, request, make_response
 
@@ -194,7 +204,7 @@ This solution is not quite very efficient as it uses personal data but it can be
 
 Another solution can be spreading awareness to client.
 
-I know that those solutions doesn't seem efficent but honestly, it depends totally on the user himself and the power of the OS firewall at some point.
+I know that those solutions doesn't seem efficient but honestly, it depends totally on the user himself and the power of the OS firewall at some point.
 
 ## Conclusion
 
