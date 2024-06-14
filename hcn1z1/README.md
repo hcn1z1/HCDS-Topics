@@ -18,8 +18,8 @@ Hi there! I'm Mohamed Amine Hammane, a passionate developer and security expert 
 
 
 ### Featured Projects
-- <img src="https://skillicons.dev/icons?i=security" width="20"/> **HCDS Security Model**: An advanced model for securing digital systems. [More details](#)
-- <img src="https://skillicons.dev/icons?i=ai" width="20"/> **AI-driven Threat Detection**: Leveraging AI to predict and mitigate security threats in real-time. [More details](#)
+- **HCDS Security Model**: An advanced model for securing digital systems. [More details](#)
+- **AI-driven Threat Detection**: Leveraging AI to predict and mitigate security threats in real-time. [More details](#)
 
 ## Contributions and Collaborations
 I am always open to collaborating on projects or discussing innovations in **cybersecurity** and **digital systems**. Feel free to reach out through any of the contact methods listed above!
