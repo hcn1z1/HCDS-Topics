@@ -171,7 +171,7 @@ You can implement **CSP** in your response headers. An example of a valid **CSP*
 
 **<span style="font-size:1.1em;">Flask implementation</span>**
 
-the same way we implemented HTST on python, we can implement **CSP** too in our response header
+the same way we implemented HSTS on python, we can implement **CSP** too in our response header
 ```python
 from flask import Flask, render_template, make_response
 
