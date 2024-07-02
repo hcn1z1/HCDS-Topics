@@ -119,7 +119,7 @@ This list is uploaded from <sup>[2](https://github.com/OWASP/www-community/blob/
 
 ## Mitigation and sanitization
 
-### I . FUSE 
+### I. FUSE 
 
 FUSE is an open source framework designed to detect and sanitize vulnerabilities associated with **Unrestricted File Upload** (UFU). It can identify **10** different type of UFU and **Unrestricted Execuable File Upload** (UEFU). This framework aims to identify UFU/UEFU vuln that enable code execution from uploaded seed files that are processed by PHP interpreters (such as XHTML PHP files) on Apache servers or executed by the major three web browsers —Chrome, Firefox, and Microsoft Edge.<sup>[3](https://www.researchgate.net/profile/Seongil-Wi-2/publication/339495940_FUSE_Finding_File_Upload_Bugs_via_Penetration_Testing/links/5e9d9a7f299bf13079aa9dbe/FUSE-Finding-File-Upload-Bugs-via-Penetration-Testing.pdf)</sup>
 
@@ -130,7 +130,7 @@ You can find the whole source code here [FUSE](https://github.com/WSP-LAB/FUSE)
 
 
 
-### II . Metadata and regex
+### II. Metadata and regex
 
 Another approach could be to utilize regular expressions (**regex**) to detect and then sanitize any potential attacks. Additionally, configuring the upload function to modify the file name, limiting both the number and size of uploaded files, could further enhance security. Finally, instead of returning a direct path to the uploaded file, the system could direct users to an **HTML page** that displays the image. This minimizes the critical use of **PHP** in handling file uploads.
 
@@ -158,7 +158,7 @@ another regex is just to see the ``file name`` extension.
  It's not very effective since it can be **spoofed** technically and it's still enable the hacker to upload a malicious script to the server. This's why we are going use another technique to analyse all the files we upload using [mimetype](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
 
 
-### MIMEType detection
+### III. MIMEType detection
 
 A MIME type (Multipurpose Internet Mail Extensions type) is a standard way of classifying file types on the internet. Originally developed for email, MIME types have become integral in other applications as well, such as web browsers and servers, to determine how to handle different file formats.<sup>[4](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)</sup>
 
